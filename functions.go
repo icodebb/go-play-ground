@@ -10,26 +10,30 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+// Operator is role.
 type Operator struct {
 	Name     string
 	Age      int
 	workTime int
 }
 
+// MyLog is my wrapper of logrus.
 func MyLog(level int, msg ...interface{}) {
 	line := fmt.Sprintf("%v", msg...)
 	log.Info(line)
 }
 
+// MyLogf is my wrapper of logrus with format.
 func MyLogf(level int, format string, msg ...interface{}) {
 	line := fmt.Sprintf(format, msg...)
 	log.Infof(line)
 }
 
+// SimpleTest tests log and Fibonacci.
 func SimpleTest() {
 	// Test function and struct
-	op := New("Ice", 46, 24)
-	t, err := op.MySum()
+	op := new("Ice", 46, 24)
+	t, err := op.mySum()
 	if err == nil {
 		log.Infof("Years before work: %v", t)
 	}
@@ -40,7 +44,7 @@ func SimpleTest() {
 	}
 }
 
-func New(name string, age int, working int) *Operator {
+func new(name string, age int, working int) *Operator {
 	op := &Operator{
 		Name:     "Ice Liu",
 		Age:      46,
@@ -55,6 +59,6 @@ func (c *Operator) myOwnAdd(x int, y int) (int, error) {
 	return z, nil
 }
 
-func (c *Operator) MySum() (int, error) {
+func (c *Operator) mySum() (int, error) {
 	return c.Age - c.workTime, nil
 }

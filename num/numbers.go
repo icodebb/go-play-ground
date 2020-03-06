@@ -2,13 +2,15 @@
  * Play numbers.
  */
 
-package main
+package num
 
 import (
 	"math/rand"
-	// "time"
+
+	log "github.com/sirupsen/logrus"
 )
 
+// Fibonacci produces Fibonacci numbers.
 func Fibonacci(n int) int {
 	if n < 2 {
 		return n
@@ -30,4 +32,8 @@ func RandomString(len int) string {
 		bytes[i] = byte(RandomInt(65, 90))
 	}
 	return string(bytes)
+}
+
+func NumTest() {
+	log.Infof("Random int:%v, string:%s", RandomInt(1, 10), RandomString(8))
 }
