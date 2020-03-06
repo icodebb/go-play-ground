@@ -7,6 +7,7 @@ package main
 import (
 	"sync"
 
+	menu "github.com/icodebb/go-play-ground/menu"
 	utils "github.com/icodebb/go-play-ground/utils"
 	log "github.com/sirupsen/logrus"
 )
@@ -18,6 +19,8 @@ func main() {
 	log.Infoln("Start")
 
 	utils.MyVersion()
+
+	menu.PrintMenu()
 
 	log.Infof("Random int:%v, string:%s", RandomInt(1, 10), RandomString(8))
 
