@@ -1,0 +1,5 @@
+/**
+ * MyPlayGround document
+ */
+
+package main
