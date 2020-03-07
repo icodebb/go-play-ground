@@ -27,10 +27,10 @@ type choice struct {
 func PrintMenu() int {
 	choices := []choice{
 		{Target: "Info", Description: "Show program and system information.", Index: 0},
-		{Target: "Simple Test", Description: "Test logging and Fabonacci", Index: 1},
+		{Target: "Simple Test", Description: "Test logging and Fabonacci.", Index: 1},
 		{Target: "Numeric Test", Description: "Test numeric functions such as random, etc.", Index: 2},
-		{Target: "Jalapeño", Description: "3500", Index: 3},
-		{Target: "Aleppo", Description: "10000", Index: 4},
+		{Target: "Datetime Test", Description: "Test date and time.", Index: 3},
+		{Target: "Channel Test", Description: "Test channel feature.", Index: 4},
 		{Target: "Tabasco", Description: "30000", Index: 5},
 		{Target: "Malagueta", Description: "50000", Index: 6},
 		{Target: "Habanero", Description: "100000", Index: 7},

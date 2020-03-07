@@ -2,7 +2,7 @@
  * Play with chennels.
  */
 
-package main
+package ch
 
 import (
 	"context"
@@ -57,7 +57,7 @@ func youFirst() {
 
 	go func() {
 		time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
-		ch <- "You"
+		ch <- "It's You."
 	}()
 
 	select {
@@ -79,7 +79,7 @@ func meFirst() {
 
 	go func() {
 		time.Sleep(time.Duration(rand.Intn(200)) * time.Millisecond)
-		ch <- "Me"
+		ch <- "It's Me."
 	}()
 
 	select {

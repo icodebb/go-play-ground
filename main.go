@@ -7,9 +7,11 @@ package main
 import (
 	"sync"
 
-	menu "github.com/icodebb/go-play-ground/menu"
-	num "github.com/icodebb/go-play-ground/num"
-	utils "github.com/icodebb/go-play-ground/utils"
+	"github.com/icodebb/go-play-ground/ch"
+	"github.com/icodebb/go-play-ground/dt"
+	"github.com/icodebb/go-play-ground/menu"
+	"github.com/icodebb/go-play-ground/num"
+	"github.com/icodebb/go-play-ground/utils"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -27,6 +29,8 @@ func main() {
 		0: utils.MyVersion,
 		1: SimpleTest,
 		2: num.NumTest,
+		3: dt.TestTime,
+		4: ch.TestChennel,
 	}
 
 	log.Infoln("Start")
@@ -46,14 +50,8 @@ func main() {
 	// ExampleWithCancel(&wg)
 	// wg.Wait()
 
-	// Test time
-	// TestTime()
-
 	// Test JSON
 	// TestJson0()
-
-	// Test Chennels
-	// TestChennel()
 
 	log.Infoln("Done")
 }

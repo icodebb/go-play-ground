@@ -7,6 +7,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/icodebb/go-play-ground/num"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -40,7 +41,7 @@ func SimpleTest() {
 
 	// Test numbers
 	for n := 0; n < 10; n++ {
-		log.Infof("%v", Fibonacci(n))
+		log.Infof("%v", num.Fibonacci(n))
 	}
 }
 

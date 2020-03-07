@@ -1,4 +1,4 @@
-package main
+package dt
 
 import (
 	"time"
@@ -6,6 +6,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+// TestTime date and time test function.
 func TestTime() {
 	p := log.Infoln
 
